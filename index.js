@@ -1,4 +1,4 @@
-for (var i = 1; i < 100; i++) {
+for (let i = 1; i <= 100; i++) {
   //I use two conditions in the if-statement to determine if it should print “Fizz Buzz”. We use a double ampersand, which means both conditions must be true.
   if ( i % 3 === 0 && i % 5 === 0) {
     console.log('Fizz Buzz');
