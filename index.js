@@ -1,18 +1,32 @@
-for (let i = 1; i <= 100; i++) {
-  //I use two conditions in the if-statement to determine if it should print “Fizz Buzz”. We use a double ampersand, which means both conditions must be true.
-  if ( i % 3 === 0 && i % 5 === 0) {
-    console.log('Fizz Buzz');
+function fizzBuzz () {
+  let MAX_NUMBER = 100;  
+  for (let numberToCheck = 1; numberToCheck <= 100; numberToCheck++) {
+    //I use two conditions in the if-statement to determine if it should print “Fizz Buzz”. We use a double ampersand, which means both conditions must be true.
+    if ( isDivisibleBy3(numberToCheck) && isDivisibleBy5(numberToCheck)) {
+      console.log('Fizz Buzz');
+    }
+    // If the number is dividable by 3, we print out “Fizz”
+    if ( isDivisibleBy3(numberToCheck)) {
+      console.log('Fizz');
+    }
+    //Else, if the number is dividable by 5, we print out “Buzz”.
+    else if ( isDivisibleBy5(numberToCheck)) {
+      console.log('Buzz');
+    }
+    //If none of those two conditions are met, we will enter the last else block and print out the actual number.
+    else {
+        console.log(numberToCheck);
+    }
   }
-  // If the number is dividable by 3, we print out “Fizz”
-  if ( i % 3 === 0) {
-    console.log('Fizz');
-  }
-  //Else, if the number is dividable by 5, we print out “Buzz”.
-  else if ( i % 5 === 0) {
-    console.log('Buzz');
-  }
-  //If none of those two conditions are met, we will enter the last else block and print out the actual number.
-  else {
-      console.log(i);
-  }
+// functions to for checking the number is divisible by 3 or 5.
+function isDivisibleBy3(numberToCheck) {
+  return numberToCheck % 3 === 0
 }
+
+function isDivisibleBy5(numberToCheck) {
+  return numberToCheck % 5 === 0
+}
+
+}
+
+fizzBuzz ();
