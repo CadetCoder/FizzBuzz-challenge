@@ -1,6 +1,6 @@
 function fizzBuzz () {
   let MAX_NUMBER = 100;  
-  for (let numberToCheck = 1; numberToCheck <= 100; numberToCheck++) {
+  for (let numberToCheck = 1; numberToCheck <= MAX_NUMBER; numberToCheck++) {
     //I use two conditions in the if-statement to determine if it should print “Fizz Buzz”. We use a double ampersand, which means both conditions must be true.
     if ( isDivisibleBy3(numberToCheck) && isDivisibleBy5(numberToCheck)) {
       console.log('Fizz Buzz');
